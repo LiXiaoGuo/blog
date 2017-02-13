@@ -7,6 +7,7 @@ tags:
  辛苦了一阵，博客也终于搭好了，现在我也要学着写写博客，一来给自己以后查找资料方便；二来也练一练文笔，现在一打字、一拿笔，都不知道说些什么了。
 ## 正文
  昨天把一个功能导进一个老项目中，发现两个项目很多东西都不一样，比如网络库、消息总线、图片加载库等等，很多东西能重用的我就重用了，但还是有很多是新加的，瞎忙了两个小时，把报错的都修改了。但是当我满怀希望的时候，发现gradle build报错：
+<!--more-->
 ```java
 Unable to execute dex: method ID not in [0, 0xffff]: 65536
 Conversion to Dalvik format failed: Unable to execute dex: method ID not in [0, 0xffff]: 65536
