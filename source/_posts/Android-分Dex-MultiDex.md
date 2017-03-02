@@ -1,7 +1,8 @@
 ---
 title: Android 分Dex (MultiDex)
 date: 2016-12-29 16:37:33
-tags:
+tags: [Android,MultiDex]
+categories: Android
 ---
 ## 前言
  辛苦了一阵，博客也终于搭好了，现在我也要学着写写博客，一来给自己以后查找资料方便；二来也练一练文笔，现在一打字、一拿笔，都不知道说些什么了。
@@ -15,8 +16,8 @@ Conversion to Dalvik format failed: Unable to execute dex: method ID not in [0, 
  方法数超标了，在ART以前的Android系统中，Dex文件对于方法索引是用一个short类型的数据来存放的。而short的最大值是65535，因此当项目足够大包含方法数目足够多超过了65535(包括引用的外部Lib里面的所有方法)，当运行App就会得到这个错误提示。
 ## 解决方案
  1. 修改app/build.gradle
-		
-  在defaultConfig里添加
+    ​	
+    在defaultConfig里添加
 ```
 multiDexEnabled true
 ```
@@ -54,7 +55,7 @@ classpath 'com.android.tools.build:gradle:2.1.0'
 </manifest>
 ```
   如果有自己自定义Application，就去修改自己的Application
-   * 要么重写attachBaseContext方法：
+* 要么重写attachBaseContext方法：
 ```java
  public class HelloMultiDexApplication extends Application {
 	@Override
@@ -69,7 +70,7 @@ classpath 'com.android.tools.build:gradle:2.1.0'
 	}
 }
 ```
-   * 要么继承MultiDexApplication
+* 要么继承MultiDexApplication
 ```java
 public class HelloMultiDexApplication extends MultiDexApplication {
 	@Override
@@ -78,7 +79,7 @@ public class HelloMultiDexApplication extends MultiDexApplication {
 	}
 }
 ```
- 
+
 
 
 ## 有问题反馈

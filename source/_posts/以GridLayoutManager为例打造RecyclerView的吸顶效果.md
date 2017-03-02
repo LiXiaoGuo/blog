@@ -1,7 +1,8 @@
 ---
 title: 以GridLayoutManager为例打造RecyclerView的吸顶效果
 date: 2017-02-08 09:48:05
-tags:
+tags: [Android,RecyclerView,吸顶,悬停,ItemDecoration]
+categories: Android
 ---
 
 ## 效果图
